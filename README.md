@@ -1,1 +1,0 @@
-# AI_Geophysical_Inversion

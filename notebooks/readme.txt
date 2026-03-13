@@ -18,11 +18,11 @@ The work explores the integration and mutual utility of two key geophysical data
 
 MAIN OBJECTIVE:
 The primary goal is to develop machine learning models that exploit the complementary 
-nature of these datasets to predict the main lithological units (rock and soil types) 
-along the railway corridor. By integrating S-wave velocity information with Power 
-Spectral Density (PSD) signatures computed from dark fiber DAS records, the study 
-aims to enhance lithological characterization and improve subsurface understanding 
-for railway engineering applications.
+nature of these datasets to predict the main lithological units (clay layers and 
+compacted sand horizons) along the railway corridor. By integrating S-wave velocity 
+information with Power Spectral Density (PSD) signatures computed from dark fiber 
+DAS records, the study aims to enhance lithological characterization and improve 
+subsurface understanding for railway engineering applications.
 
 KEY METHODOLOGY:
 - Extraction of Power Spectral Density (PSD) features from continuous DAS records 

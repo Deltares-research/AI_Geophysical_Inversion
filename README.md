@@ -71,6 +71,54 @@ FNO is particularly useful for:
 - Fluid dynamics
 - Material property prediction
 
+## Project Objective: Railway Instability Monitoring via Dark Fiber
+
+### Problem Statement
+
+This project uses FNO to **predict 2D S-wave velocity fields from seismic shotgathers** as a fast surrogate model for surface wave inversion. The key application is:
+
+**Monitoring railway infrastructure instability using Dark Fiber DAS (Distributed Acoustic Sensing)**
+
+### Why This Matters
+
+- **Dark Fiber**: Unused optical fiber cables along railway networks can be repurposed as distributed sensors via Distributed Acoustic Sensing (DAS)
+- **Early Warning**: Continuous monitoring of subsurface properties (S-wave velocity) helps detect structural degradation early
+- **Cost-Effective**: Leverages existing fiber infrastructure instead of deploying traditional seismic sensors
+- **Real-time Capability**: Traditional surface wave inversion is computationally expensive; FNO enables near real-time velocity model inference
+
+### Traditional vs. FNO Approach
+
+**Traditional Surface Wave Inversion:**
+- Time-consuming (hours to days per solution)
+- Requires iterative optimization loops
+- Limited practical use for continuous monitoring
+
+**FNO-Based Approach:**
+- Forward prediction in seconds
+- Pre-trained once, then deployed for rapid inference
+- Enables continuous, real-time monitoring of railway stability
+
+### Data Pipeline
+
+```
+Seismic Shotgathers (DAS recordings) 
+    ↓
+Input to FNO Model
+    ↓
+2D S-wave Velocity Field (prediction)
+    ↓
+Subsurface Property Assessment
+    ↓
+Railways Structural Health Monitoring
+```
+
+### Project Scope
+
+- **Input**: Seismic shotgathers from DAS measurements
+- **Output**: 2D S-wave velocity models
+- **Method**: Fourier Neural Operator (FNO) as learned operator
+- **Benefit**: Acceleration of surface wave inversion for practical monitoring applications
+
 ## Related Files
 
 - **Config**: `scripts/config/config_FNO_ver02.yaml` - FNO architecture configuration

@@ -2,12 +2,12 @@ Data Fusion Work: S-wave Velocity and DAS for Lithological Prediction
 
 ================================================================================
 
-This folder contains Jupyter notebooks related to a comprehensive data fusion study 
-aimed at leveraging complementary geophysical datasets to predict lithological units 
-along a railway segment.
+This folder contains Jupyter notebooks related to an exploratory data fusion study 
+investigating the feasibility of leveraging complementary geophysical datasets to 
+predict lithological units along a railway segment.
 
 PROJECT OVERVIEW:
-The work explores the integration of two key geophysical data sources:
+The work explores the integration and mutual utility of two key geophysical data sources:
 
 1. S-wave Velocity Profiles: Seismic velocity measurements that provide information 
    about subsurface mechanical properties and structural layering.

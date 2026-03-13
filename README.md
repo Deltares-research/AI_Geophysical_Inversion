@@ -1,4 +1,4 @@
-# Fourier Neural Operator (FNO) - Basic Concepts
+# AI Reconstruction of Geophysical Profile Using FNO
 
 ## Overview
 
@@ -112,12 +112,44 @@ Subsurface Property Assessment
 Railways Structural Health Monitoring
 ```
 
-### Project Scope
+## Test Cases: Synthetic Data Validation
 
-- **Input**: Seismic shotgathers from DAS measurements
-- **Output**: 2D S-wave velocity models
-- **Method**: Fourier Neural Operator (FNO) as learned operator
-- **Benefit**: Acceleration of surface wave inversion for practical monitoring applications
+To validate the FNO concept, this project tests the model on **three increasingly complex synthetic geological scenarios**:
+
+### Case I: Simple Two-Layer Model
+- **Description**: Simplest scenario with two distinct horizontal layers
+- **Purpose**: Baseline validation; tests if FNO can distinguish between simple layered structures
+- **Velocity Profile**: Two constant layers with a clear boundary
+- **Notebook**: `notebooks/CASE_I/Inference_CASE_I_source_31m.ipynb`
+
+### Case II: Constant Medium with Embedded Anomaly
+- **Description**: Homogeneous background with localized velocity anomalies
+- **Purpose**: Tests FNO's ability to detect and localize isolated subsurface features
+- **Features**: Point anomalies or small-scale heterogeneities embedded in constant velocity medium
+- **Notebooks**: 
+  - `notebooks/CASE_II/Inference_CASE_II_source_5m.ipynb`
+  - `notebooks/CASE_II/Inference_CASE_II_source_31m.ipynb`
+  - `notebooks/CASE_II/Inference_CASE_II_source_56m.ipynb`
+  - `notebooks/CASE_II/Inference_CASE_II_Combined.ipynb`
+
+### Case III: Complex Three-Layer Model (Stiff-Soft-Stiff)
+- **Description**: Realistic geological scenario with variable velocity and wavy interfaces
+- **Velocity Profile**: Three-layer structure with alternating stiffness (high-low-high S-wave velocity)
+- **Complexity**: Non-planar interfaces, laterally varying velocity within layers
+- **Purpose**: Tests FNO performance on realistic, complex subsurface models
+- **Notebooks**:
+  - `notebooks/COMPLEX/Inference_COMPLEX_6m_3Layers.ipynb`
+  - `notebooks/COMPLEX/Inference_COMPLEX_31m.ipynb`
+  - `notebooks/COMPLEX/Inference_COMPLEX_31m_v2.ipynb`
+
+### Progression and Learning
+
+The three-case progression tests:
+1. **Simple structures** → Baseline accuracy on clean, layered models
+2. **Anomaly detection** → Capability to identify localized features
+3. **Complex geology** → Real-world applicability with variable velocity and irregular interfaces
+
+Success across all three cases demonstrates FNO's robustness for railway monitoring applications where subsurface conditions vary from simple to complex.
 
 ## Related Files
 

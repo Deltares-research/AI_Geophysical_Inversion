@@ -71,32 +71,39 @@ FNO is particularly useful for:
 - Fluid dynamics
 - Material property prediction
 
-## Project Objective: Railway Instability Monitoring via Dark Fiber
+## Project Objective
 
-### Problem Statement
+**Assessing the Reliability of FNO to Predict 2D S-wave Velocity**
 
-This project uses FNO to **predict 2D S-wave velocity fields from seismic shotgathers** as a fast surrogate model for surface wave inversion. The key application is:
+This project rigorously evaluates **Fourier Neural Operator (FNO) as a reliable method for predicting 2D S-wave velocity fields from seismic shotgathers**. The objective is to establish FNO's applicability and accuracy for rapid geophysical property estimation with direct relevance to **railway infrastructure monitoring**.
 
-**Monitoring railway infrastructure instability using Dark Fiber DAS (Distributed Acoustic Sensing)**
+### Relevance to Railway Monitoring
 
-### Why This Matters
+Railways are critical infrastructure that require continuous integrity assessment. Subsurface conditions directly impact rail stability and safety:
 
-- **Dark Fiber**: Unused optical fiber cables along railway networks can be repurposed as distributed sensors via Distributed Acoustic Sensing (DAS)
-- **Early Warning**: Continuous monitoring of subsurface properties (S-wave velocity) helps detect structural degradation early
-- **Cost-Effective**: Leverages existing fiber infrastructure instead of deploying traditional seismic sensors
-- **Real-time Capability**: Traditional surface wave inversion is computationally expensive; FNO enables near real-time velocity model inference
+- **Subsurface Degradation**: Soil consolidation, moisture changes, and geological faults can destabilize tracks
+- **Early Detection**: Monitoring S-wave velocity (a proxy for subsurface stiffness) enables early warning of structural issues
+- **Dark Fiber Advantage**: Existing optical fiber cables along railway corridors can be repurposed as Distributed Acoustic Sensing (DAS) arrays
+- **Continuous Monitoring**: Real-time assessment of subsurface properties supports predictive maintenance strategies
 
-### Traditional vs. FNO Approach
+### Why FNO for Velocity Prediction?
 
-**Traditional Surface Wave Inversion:**
-- Time-consuming (hours to days per solution)
-- Requires iterative optimization loops
-- Limited practical use for continuous monitoring
+**Challenge**: Traditional surface wave inversion is computationally slow (hours to days), making continuous monitoring impractical.
 
-**FNO-Based Approach:**
-- Forward prediction in seconds
-- Pre-trained once, then deployed for rapid inference
-- Enables continuous, real-time monitoring of railway stability
+**Solution**: FNO provides:
+- **Speed**: Sub-second predictions after training
+- **Efficiency**: Learns operator in Fourier domain, capturing global spatial relationships
+- **Reliability Assessment**: This project validates FNO accuracy across diverse geological scenarios
+- **Practical Deployment**: Once validated, enables rapid velocity inversion for operational railway monitoring
+
+### What This Project Tests
+
+Through three synthetic test cases of increasing complexity, we assess:
+- ✓ FNO's accuracy on simple layered structures
+- ✓ FNO's capability to detect localized anomalies
+- ✓ FNO's performance on realistic, complex geological models with variable velocity and wavy interfaces
+
+Success demonstrates FNO as a **reliable, deployable tool** for rapid 2D S-wave velocity prediction supporting railway infrastructure health monitoring.
 
 ### Data Pipeline
 
